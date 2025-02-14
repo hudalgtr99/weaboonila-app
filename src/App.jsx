@@ -58,20 +58,33 @@ function NavBar(){
 
   return(
     <nav className="nav-bar">
-      <div className="logo">
-        <span role="img">🍥</span>
-        <h1>WeabooNila</h1>
-        <span role="img">🍥</span>
-      </div>
-      <div className="search-container">
-        <input className="search" type="text" placeholder="Search anime..." value={query} onChange={(e) => setQuery(e.target.value)} />
-        <p className="search-results">
-          Found <strong>4</strong> results
-        </p>
-      </div>
+      <Logo/>
+      <Search />
     </nav>
   )
 }
+
+function Logo(){
+  return(
+    <div className="logo">
+      <span role="img">🍥</span>
+      <h1>WeabooNila</h1>
+      <span role="img">🍥</span>
+    </div>
+  )
+}
+
+function Search(){
+  return(
+    <div className="search-container">
+      <input className="search" type="text" placeholder="Search anime..." value={query} onChange={(e) => setQuery(e.target.value)} />
+      <p className="search-results">
+        Found <strong>4</strong> results
+      </p>
+    </div>
+  )
+}
+
 
 function Main(){
 
