@@ -41,15 +41,7 @@ const animesData = [
 ];
 
 export default function App() {
-  const [animes, setAnimes] = useState(animesData);
-  const [selectedAnime, setSelectedAnime] = useState(animes[0]);
-  const [isOpen1, setIsOpen1] = useState(true);
-  const [isOpen2, setIsOpen2] = useState(true);
 
-  function handleSelectedAnime(id) {
-    const newAnime = animes.filter((anime) => anime.mal_id === id);
-    setSelectedAnime(newAnime[0]);
-  }
 
   return (
     <>
@@ -82,6 +74,17 @@ function NavBar(){
 }
 
 function Main(){
+
+  const [animes, setAnimes] = useState(animesData);
+  const [selectedAnime, setSelectedAnime] = useState(animes[0]);
+  const [isOpen1, setIsOpen1] = useState(true);
+  const [isOpen2, setIsOpen2] = useState(true);
+
+  function handleSelectedAnime(id) {
+    const newAnime = animes.filter((anime) => anime.mal_id === id);
+    setSelectedAnime(newAnime[0]);
+  }
+
   return(
     <main className="main">
       <div className="box">
