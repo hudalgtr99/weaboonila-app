@@ -53,9 +53,6 @@ export default function App() {
 }
 
 function NavBar(){
-
-  const [query, setQuery] = useState('');
-
   return(
     <nav className="nav-bar">
       <Logo/>
@@ -75,6 +72,8 @@ function Logo(){
 }
 
 function Search(){
+  const [query, setQuery] = useState('');
+
   return(
     <div className="search-container">
       <input className="search" type="text" placeholder="Search anime..." value={query} onChange={(e) => setQuery(e.target.value)} />
