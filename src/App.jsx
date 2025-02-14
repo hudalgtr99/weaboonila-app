@@ -41,7 +41,6 @@ const animesData = [
 ];
 
 export default function App() {
-  const [query, setQuery] = useState('');
   const [animes, setAnimes] = useState(animesData);
   const [selectedAnime, setSelectedAnime] = useState(animes[0]);
   const [isOpen1, setIsOpen1] = useState(true);
@@ -106,6 +105,9 @@ export default function App() {
 }
 
 function NavBar(){
+  
+  const [query, setQuery] = useState('');
+
   return(
     <nav className="nav-bar">
       <div className="logo">
